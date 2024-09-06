@@ -1,117 +1,154 @@
 <!DOCTYPE html>
 <html lang=en>
+
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>datalab industries</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>datalab industries</title>
 </head>
 
 <style>
+    @import url('https://cdnjs.cloudflare.com/ajax/libs/Iosevka/6.0.1/iosevka/iosevka.min.css');
 
-@import url('https://cdnjs.cloudflare.com/ajax/libs/Iosevka/6.0.1/iosevka/iosevka.min.css');
+    body {
+        margin: 10px;
+        margin-left: 2rem;
+        font-size: 1.2rem;
+        justify-content: center;
+        align-items: center;
+    }
 
-body {
-    margin: 10px;
-    margin-left: 2rem;
-    font-size: 1.2rem;
-    justify-content: center;
-    align-items: center;
-}
+    .container {
+        width: 50%;
+        max-width: 1000px;
+        padding: 20px;
+    }
 
-.container {
-    width: 50%;
-    max-width: 1000px;
-    padding: 20px;
-}
+    .logo {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
-.logo {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-}
+    pre,
+    body,
+    footer {
+        font-family: Iosevka Web, monospace;
+    }
 
-pre, body, footer {
-    font-family: Iosevka Web, monospace;
-}
+    footer {
+        width: 100%;
+        margin-top: 3rem;
+        font-size: 0.8rem;
+        color: dark grey;
+    }
 
-footer {
-    width: 100%;
-    margin-top: 3rem;
-    font-size: 0.8rem;
-    color: dark grey;
-}
+    footer>p {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0;
+        text-align: center;
+    }
 
-footer > p {
-    margin: 0;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    text-align: center;
-}
+    @media (prefers-color-scheme: dark) {
 
-@media (prefers-color-scheme: dark) {
-   body, footer {
-       color: #dcdcdc;
-       background-color: #161625;
-   }
-   a {
-      color: white;
-   }
-}
+        body,
+        footer {
+            color: #dcdcdc;
+            background-color: #161625;
+        }
 
-@media (prefers-color-scheme: light) {
-   body, footer {
-       color: black;
-       background-color: AntiqueWhite;
-   }
-   a {
-      color: black;
-   }
-}
+        a {
+            color: white;
+        }
+    }
 
-ul {
-  list-style: none;
-  margin-left: 0;
-  padding-left: 0;
-}
+    @media (prefers-color-scheme: light) {
 
-li {
-  padding-left: 1em;
-  text-indent: -1em;
-}
+        body,
+        footer {
+            color: black;
+            background-color: AntiqueWhite;
+        }
 
-li:before {
-  content: "◉";
-  padding-right: 5px;
-}
+        a {
+            color: black;
+        }
+    }
 
+    ul {
+        list-style: none;
+        margin-left: 0;
+        padding-left: 0;
+    }
 
+    li {
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+
+    li:before {
+        content: "◉";
+        padding-right: 5px;
+    }
 </style>
 
 <body>
 
-<div class="container">
+    <div class="container">
 
-<div class="logo">
-    <img src="./img/basic.svg" alt="datalab industries logo - tune in next month for your next custom logo" width="150rem;">
-</div>
+        <div class="logo">
+            <img src="./img/basic.svg" alt="datalab industries logo" width="150rem;">
+        </div>
 
-<p>The open source scientific software and data consultancy of<br/>Dr Matthew Evans, King's Lynn, UK.</p>
+        <p>The open source scientific software and data consultancy of<br />Dr Matthew Evans, King's Lynn, UK.</p>
 
-<ul>
-    <li> Enquiries: <a href="mailto:hello@datalab.industries">hello@datalab.industries</a> 
-    <li> Projects: <a href="https://github.com/datalab-industries">https://github.com/datalab-industries</a>
-    <li> Research: <a href="https://ml-evs.science">https://ml-evs.science</a>
-</ul>
+        <ul>
+            <li> Enquiries: <a href="mailto:hello@datalab.industries">hello@datalab.industries</a>
+            <li> Projects: <a href="https://github.com/datalab-industries">https://github.com/datalab-industries</a>
+            <li> Research: <a href="https://ml-evs.science">https://ml-evs.science</a>
+        </ul>
 
-<footer>
-    <p>© 2024 datalab industries ltd.</p>
-    <p>Company number: 15704476</p>
-    <p>Cobwebs, Setch Road, Blackborough End</p>
-    <p>King's Lynn, Norfolk, PE32 1SL, UK</p>
-</footer>
+        <footer>
+            <p>© 2024 datalab industries ltd.</p>
+            <p>Company number: 15704476</p>
+            <p>Cobwebs, Setch Road, Blackborough End</p>
+            <p>King's Lynn, Norfolk, PE32 1SL, UK</p>
+        </footer>
 
-</div>
+    </div>
+
+    <script>
+        function randomiseLogo() {
+            const logo = document.querySelector('.logo img');
+            const logos = [
+                './img/blotting.svg',
+                './img/button.svg',
+                './img/fat-oil.svg',
+                './img/felt.svg',
+                './img/glass.svg',
+                './img/glossy.svg',
+                './img/glowing-metal.svg',
+                './img/glow.svg',
+                './img/gouache.svg',
+                './img/metalised.svg',
+                './img/metal.svg',
+                './img/neon.svg',
+                './img/pearl.svg',
+                './img/plastic.svg',
+                './img/pointilism.svg',
+                './img/riddled.svg'
+            ];
+            const randomLogo = logos[Math.floor(Math.random() * logos.length)];
+            logo.src = randomLogo;
+        }
+
+        randomiseLogo();
+        window.onload = randomiseLogo;
+
+    </script>
 
 </body>
+
 </html>
