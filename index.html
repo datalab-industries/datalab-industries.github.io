@@ -14,6 +14,20 @@ body {
     margin: 10px;
     margin-left: 2rem;
     font-size: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 50%;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.logo {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 pre, body, footer {
@@ -21,8 +35,18 @@ pre, body, footer {
 }
 
 footer {
+    width: 100%;
+    margin-top: 3rem;
     font-size: 0.8rem;
     color: dark grey;
+}
+
+footer > p {
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+    text-align: center;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -45,38 +69,49 @@ footer {
    }
 }
 
+ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -1em;
+}
+
+li:before {
+  content: "◉";
+  padding-right: 5px;
+}
+
 
 </style>
 
 <body>
-<pre>
-        ________________________
-       /\                       \
-       \_|    D A T A L A B     | 
-         |                      |
-         |      INDUSTRIES      |
-         |                      |
-         |         LTD.         |
-         |   ___________________|_
-          \_/_____________________/
-                                                     
-The open source scientific software and data consultancy of<br/>Dr Matthew Evans, King's Lynn, UK.
 
-◉ Enquiries: <a href="mailto:hello@datalab.industries">hello@datalab.industries</a> 
-◉ Projects: <a href="https://github.com/datalab-industries">https://github.com/datalab-industries</a> and <a href="https://github.com/ml-evs">https://github.com/ml-evs</a>.
-◉ Research: <a href="https://ml-evs.science">https://ml-evs.science</a>
+<div class="container">
 
-</pre>
+<div class="logo">
+    <img src="./img/basic.svg" alt="datalab industries logo - tune in next month for your next custom logo" width="150rem;">
+</div>
+
+<p>The open source scientific software and data consultancy of<br/>Dr Matthew Evans, King's Lynn, UK.</p>
+
+<ul>
+    <li> Enquiries: <a href="mailto:hello@datalab.industries">hello@datalab.industries</a> 
+    <li> Projects: <a href="https://github.com/datalab-industries">https://github.com/datalab-industries</a>
+    <li> Research: <a href="https://ml-evs.science">https://ml-evs.science</a>
+</ul>
 
 <footer>
-© 2024 datalab industries ltd.
-<br />
-Company number: 15704476
-<br />
-Cobwebs, Setch Road, Blackborough End
-<br />
-King's Lynn, Norfolk, PE32 1SL, UK
+    <p>© 2024 datalab industries ltd.</p>
+    <p>Company number: 15704476</p>
+    <p>Cobwebs, Setch Road, Blackborough End</p>
+    <p>King's Lynn, Norfolk, PE32 1SL, UK</p>
 </footer>
+
+</div>
 
 </body>
 </html>
