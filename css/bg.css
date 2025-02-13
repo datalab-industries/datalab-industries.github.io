@@ -82,27 +82,3 @@ body {
         radial-gradient(circle at var(--overlay3-x) var(--overlay3-y), var(--color-medium-orchid) 0%, transparent 40%);
     mix-blend-mode: soft-light;
 }
-
-@media (prefers-color-scheme: dark) {
-
-    body,
-    footer {
-        color: var(--color-text);
-    }
-
-    a {
-        color: white;
-    }
-}
-
-@media (prefers-color-scheme: light) {
-
-    body,
-    footer {
-        color: var(--color-text-light);
-    }
-
-    a {
-        color: black;
-    }
-}
