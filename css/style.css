@@ -1,0 +1,110 @@
+:root {
+    --color-bg: #1f1f51;
+    --color-indigo: rgba(75, 0, 130, 0.6);
+    --color-navy: rgba(0, 0, 128, 0.6);
+    --color-midnight-blue: rgba(25, 25, 112, 0.6);
+    --color-slate-blue: rgba(72, 61, 139, 0.6);
+    --color-medium-slate-blue: rgba(106, 90, 205, 0.6);
+    --color-blue-violet: #310E50;
+    --color-dodger-blue: #13487D;
+    --color-royal-blue: #4C3175;
+    --color-medium-purple: #554C86;
+    --color-dark-blue: rgba(0, 0, 139, 0.4);
+    --color-medium-orchid: #4B2E86;
+    --color-text: #e6e6fa;
+    --color-bg-light: AntiqueWhite;
+    --color-text-light: black;
+    /* Default gradient positions */
+    --pos1-x: 10%;
+    --pos1-y: 10%;
+    --pos2-x: 90%;
+    --pos2-y: 20%;
+    --pos3-x: 30%;
+    --pos3-y: 40%;
+    --pos4-x: 70%;
+    --pos4-y: 60%;
+    --pos5-x: 50%;
+    --pos5-y: 50%;
+    --pos6-x: 20%;
+    --pos6-y: 80%;
+    --pos7-x: 80%;
+    --pos7-y: 90%;
+    --pos8-x: 40%;
+    --pos8-y: 70%;
+    /* Default overlay positions */
+    --overlay1-x: 60%;
+    --overlay1-y: 30%;
+    --overlay2-x: 20%;
+    --overlay2-y: 50%;
+    --overlay3-x: 80%;
+    --overlay3-y: 70%;
+}
+
+body {
+    margin: 10px;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    font-family: 'Iosevka Web', monospace;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+.background::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at var(--pos1-x) var(--pos1-y), var(--color-indigo) 0%, transparent 30%),
+        radial-gradient(circle at var(--pos2-x) var(--pos2-y), var(--color-midnight-blue) 0%, transparent 30%),
+        radial-gradient(circle at var(--pos3-x) var(--pos3-y), var(--color-navy) 0%, transparent 30%),
+        radial-gradient(circle at var(--pos4-x) var(--pos4-y), var(--color-slate-blue) 0%, transparent 30%),
+        radial-gradient(circle at var(--pos5-x) var(--pos5-y), var(--color-medium-slate-blue) 0%, transparent 30%),
+        radial-gradient(circle at var(--pos6-x) var(--pos6-y), var(--color-blue-violet) 0%, transparent 30%),
+        radial-gradient(circle at var(--pos7-x) var(--pos7-y), var(--color-dodger-blue) 0%, transparent 30%),
+        radial-gradient(circle at var(--pos8-x) var(--pos8-y), var(--color-royal-blue) 0%, transparent 30%);
+    filter: blur(30px);
+    mix-blend-mode: screen;
+    opacity: 0.7;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image:
+        radial-gradient(circle at var(--overlay1-x) var(--overlay1-y), var(--color-medium-purple) 0%, transparent 40%),
+        radial-gradient(circle at var(--overlay2-x) var(--overlay2-y), var(--color-dark-blue) 0%, transparent 40%),
+        radial-gradient(circle at var(--overlay3-x) var(--overlay3-y), var(--color-medium-orchid) 0%, transparent 40%);
+    mix-blend-mode: soft-light;
+}
+
+@media (prefers-color-scheme: dark) {
+
+    body,
+    footer {
+        color: var(--color-text);
+        background-color: var(--color-bg);
+    }
+
+    a {
+        color: white;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+
+    body,
+    footer {
+        color: var(--color-text-light);
+        background-color: var(--color-bg-light);
+    }
+
+    a {
+        color: black;
+    }
+}
